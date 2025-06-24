@@ -1,0 +1,39 @@
+[package]
+name = "music_player"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Audio playback
+rodio = "0.19"
+symphonia = { version = "0.5", features = ["all"] }
+
+# Terminal UI
+crossterm = "0.28"
+ratatui = "0.29"
+
+# File handling and metadata
+walkdir = "2.5"
+id3 = "1.14"
+mp3-duration = "0.1"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Async runtime (for non-blocking audio)
+tokio = { version = "1.40", features = ["full"] }
+
+# Random number generation for shuffle
+rand = "0.8"
+
+# Configuration and data structures
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Signal handling
+ctrlc = "3.4"
